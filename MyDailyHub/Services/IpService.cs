@@ -14,9 +14,9 @@ namespace MyDailyHub.Services
     public class IpService
     {
 
-        public string ip_String { get; set; } //temp test value
+        public string ip_String { get; set; }
         
-        public IpService(string ip) //temp test value
+        public IpService(string ip)
         {
             ip_String = ip;
         }

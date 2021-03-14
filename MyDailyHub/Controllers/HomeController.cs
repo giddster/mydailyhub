@@ -18,9 +18,10 @@ namespace MyDailyHub.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View(new QuoteModel());
         }
 
         public IActionResult Privacy()
