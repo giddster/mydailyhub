@@ -1,0 +1,33 @@
+﻿Ip-address: 
+	- get location info through IpStack API
+	- use city as location
+	- add if statement to make sure IP is not 127.0.0.0
+
+Weather: 
+	- https://openweathermap.org/
+	- use location info to call a weather API
+	- Display different weather icons depending on weather conditions
+
+News: 
+	- https://newsapi.org/ or https://rapidapi.com/blog/rapidapi-featured-news-apis/
+	- Just add a slideshow or other transitional(rolling) element of news headlines (perhaps based on location?)
+
+Stocks:
+	- https://rapidapi.com/apidojo/api/yahoo-finance1
+
+Quote of the day:
+	- https://type.fit/api/quotes
+	- This JSON file is an array, so it work fine to randomize with a random.Next() method but make sure it does not pick the same quote over and over
+	- This could be somewhere at the top of the page
+
+
+
+
+
+
+ipstack API Access Key: 5e40b6754ec2df29eb892f39aa57a1ec
+
+Make API Request: Let's try making an API request to look up the data behind your own IP address, which is 81.233.4.247. Simply attach it along with your API Access Key to the API's base URL:
+http://api.ipstack.com/81.233.4.247?access_key=5e40b6754ec2df29eb892f39aa57a1ec
+
+
