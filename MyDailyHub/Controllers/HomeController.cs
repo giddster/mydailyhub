@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MyDailyHub.Models;
+using MyDailyHub.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -21,7 +22,8 @@ namespace MyDailyHub.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View(new QuoteModel());
+            QuotesService quotes = new QuotesService();
+            return View(quotes.GetRandomQuoteModel());
         }
 
         public IActionResult Privacy()

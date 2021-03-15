@@ -22,3 +22,4 @@ namespace MyDailyHub.ApiControllers
         }
     }
 }
+// NB: this is unnecessary in terms of displaying a random quote on the view. However, this ensures that the API can be used by others
