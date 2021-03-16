@@ -1,4 +1,7 @@
-﻿Ip-address: 
+﻿All:
+	- MOVE ALL OBJECT MODELS TO SEPARATE PROJECT (CLASS LIBRARY) - MODELS FOLDER IS ONLY FOR VIEWMODELS
+
+Ip-address: 
 	- get location info through IpStack API
 	- use city as location
 	- add if statement to make sure IP is not 127.0.0.0
