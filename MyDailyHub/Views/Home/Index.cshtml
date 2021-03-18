@@ -5,20 +5,18 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to your Daily Hub!</h1> <br />
-    <h2>Your quote of the day: </h2>
-
-    @if (Model != null)
-    {
-        <h2> @Model.Text </h2>
-        <h2> @Model.Author </h2>
-    }
-    else
-    {
-        <span>Your quote could not be found :(</span>
-    }
-
-
+    <h1 class="display-4"> MyDailyHub </h1> <br />
 </div>
 
+<h3> Today's date: @DateTime.Now </h3> <br />
+<h3> Quote of the day: </h3>
 
+@if (Model != null)
+{
+    <h4> @Model.Text </h4>
+    <h4><i> @Model.Author </i></h4>
+}
+else
+{
+    <span>Your quote could not be found.</span>
+}

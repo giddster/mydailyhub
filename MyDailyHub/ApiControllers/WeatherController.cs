@@ -14,12 +14,6 @@ namespace MyDailyHub.ApiControllers
     public class WeatherController : ControllerBase
     {
 
-        //public string Get()
-        //{
-        //    IpService ipService = new IpService("81.233.4.247");
-        //    return ipService.GetIpInfo().city;
-        //}
-
         public string Get()
         {
             IpService ipService = null;

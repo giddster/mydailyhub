@@ -8,11 +8,18 @@ Ip-address:
 
 Weather: 
 	- https://openweathermap.org/
+	- OpenWeatherMap api key: dd36506305d949074912c78dff8c3bf8
+	- api call: api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 	- use location info to call a weather API
 	- Display different weather icons depending on weather conditions
 
 News: 
-	- https://newsapi.org/ or https://rapidapi.com/blog/rapidapi-featured-news-apis/
+	- https://newsapi.org/
+	- NewsAPI key: 737834b173e4495ab27e43547318c69d
+	- use 'Top Headlines' endpoint: https://newsapi.org/docs/endpoints/top-headlines
+	- get country code from IP service
+	- Show headline (title JSON property) as a hyperlink to article (url JSON property) + image (urlToImage JSON property) inside a Bootstrap Carousel
+	(maybe it's possible to iterate over the totalResults property to ensure all current headlines are displayed inside the carousel?)
 	- Just add a slideshow or other transitional(rolling) element of news headlines (perhaps based on location?)
 
 Stocks:
