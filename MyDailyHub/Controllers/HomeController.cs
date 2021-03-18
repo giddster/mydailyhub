@@ -22,8 +22,11 @@ namespace MyDailyHub.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            QuotesService quotes = new QuotesService();
-            return View(quotes.GetRandomQuoteModel());
+            //QuotesService quotes = new QuotesService();
+            //return View(quotes.GetRandomQuoteModel());
+                        
+            IpService ipService = new IpService(Request);
+            return View(ipService.GetIpModel());
         }
 
 

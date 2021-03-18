@@ -1,5 +1,6 @@
 ﻿All:
-	- MOVE ALL OBJECT MODELS TO SEPARATE PROJECT (CLASS LIBRARY) - MODELS FOLDER IS ONLY FOR VIEWMODELS
+	- Make common model for all models displayed on index.cshtml
+	- Clean up Home Controller
 
 Ip-address: 
 	- API key: 5e40b6754ec2df29eb892f39aa57a1ec
@@ -12,6 +13,8 @@ Weather:
 	- api call: api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 	- use location info to call a weather API
 	- Display different weather icons depending on weather conditions
+	- Condition JSON "id" codes: https://openweathermap.org/weather-conditions
+	- Don't forget to convert temperature to Celsius AND Fahrenheit
 
 News: 
 	- https://newsapi.org/

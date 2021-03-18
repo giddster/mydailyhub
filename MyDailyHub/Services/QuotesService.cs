@@ -17,10 +17,12 @@ namespace MyDailyHub.Services
 
         public QuotesService()
         {
-            WebClient wc = new WebClient();
-            string jsonString = wc.DownloadString(new Uri("https://type.fit/api/quotes")); //Fråga Robert varför MS egna Deserializer inte kan deserialajsa utan returnerar en lista med nulls
+            using (WebClient wc = new WebClient())
+            {
+                string jsonString = wc.DownloadString(new Uri("https://type.fit/api/quotes")); //Fråga Robert varför MS egna Deserializer inte kan deserialajsa utan returnerar en lista med nulls
 
-            QuotesList = JsonConvert.DeserializeObject<List<QuoteModel>>(jsonString);
+                QuotesList = JsonConvert.DeserializeObject<List<QuoteModel>>(jsonString);
+            }
         }
 
         public QuoteModel GetRandomQuoteModel()
