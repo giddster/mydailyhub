@@ -2,10 +2,10 @@
 	- MOVE ALL OBJECT MODELS TO SEPARATE PROJECT (CLASS LIBRARY) - MODELS FOLDER IS ONLY FOR VIEWMODELS
 
 Ip-address: 
-	- get location info through IpStack API
+	- API key: 5e40b6754ec2df29eb892f39aa57a1ec
+	- url: http://api.ipstack.com/81.233.4.247?access_key=5e40b6754ec2df29eb892f39aa57a1ec
 	- use city as location
-	- add if statement to make sure IP is not 127.0.0.0
-
+	
 Weather: 
 	- https://openweathermap.org/
 	- OpenWeatherMap api key: dd36506305d949074912c78dff8c3bf8
@@ -16,28 +16,18 @@ Weather:
 News: 
 	- https://newsapi.org/
 	- NewsAPI key: 737834b173e4495ab27e43547318c69d
-	- use 'Top Headlines' endpoint: https://newsapi.org/docs/endpoints/top-headlines
+	- use 'Top Headlines' endpoint: https://newsapi.org/v2/top-headlines?country={country}&apiKey={apiKey}
 	- get country code from IP service
-	- Show headline (title JSON property) as a hyperlink to article (url JSON property) + image (urlToImage JSON property) inside a Bootstrap Carousel
-	(maybe it's possible to iterate over the totalResults property to ensure all current headlines are displayed inside the carousel?)
-	- Just add a slideshow or other transitional(rolling) element of news headlines (perhaps based on location?)
-
-Stocks:
-	- https://rapidapi.com/apidojo/api/yahoo-finance1
-
+	- Bootstrap carousel to show each headline: https://getbootstrap.com/docs/4.3/components/carousel/
+	- JSON "Article.urlToImage" as slide image, JSON "Article.title" as slide label (hyperlink),  JSON "Source.name" as p element
+	- maybe it's possible to iterate over the totalResults property to ensure all current headlines are displayed inside the carousel?
+	
 Quote of the day:
 	- https://type.fit/api/quotes
 	- This JSON file is an array, so it work fine to randomize with a random.Next() method but make sure it does not pick the same quote over and over
 	- This could be somewhere at the top of the page
 
-
-
-
-
-
-ipstack API Access Key: 5e40b6754ec2df29eb892f39aa57a1ec
-
-Make API Request: Let's try making an API request to look up the data behind your own IP address, which is 81.233.4.247. Simply attach it along with your API Access Key to the API's base URL:
-http://api.ipstack.com/81.233.4.247?access_key=5e40b6754ec2df29eb892f39aa57a1ec
-
-
+Design:
+	- Divide elements nicely on page
+	- good color scheme
+	- favicon

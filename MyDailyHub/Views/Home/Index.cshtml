@@ -5,18 +5,29 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4"> MyDailyHub </h1> <br />
+    <h1 class="display-4"> MyDailyHub @DateTime.Now.ToString("d") </h1>
 </div>
 
-<h3> Today's date: @DateTime.Now </h3> <br />
-<h3> Quote of the day: </h3>
+<div style="text-align:center">
 
-@if (Model != null)
-{
-    <h4> @Model.Text </h4>
-    <h4><i> @Model.Author </i></h4>
-}
-else
-{
-    <span>Your quote could not be found.</span>
-}
+    @if (Model != null)
+    {
+        <p> "@Model.Text" - <i> @Model.Author </i> </p>
+    }
+    else
+    {
+        <p>Your quote could not be found.</p>
+    }
+
+</div>
+
+<div> WEATHER AREA </div>
+<br />
+
+<div> NEWS AREA </div>
+<br />
+
+
+
+
+
