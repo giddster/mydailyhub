@@ -35,7 +35,6 @@ namespace MyDailyHub.Services
         /// Returns remote IP or placeholder if remote IP is null/localhost
         /// </summary>
         /// <returns> usable IP address </returns>
-
         public string GetIpAddress()
         {
             var remoteIp = Request.HttpContext.Connection.RemoteIpAddress.ToString();

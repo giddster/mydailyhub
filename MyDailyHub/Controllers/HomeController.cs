@@ -28,8 +28,11 @@ namespace MyDailyHub.Controllers
             IpService ipService = new IpService(Request);
             ipService.GetIpModel();
 
-            WeatherService weatherService = new WeatherService(ipService.IpModel.city);
-            return View(weatherService.GetWeatherModel());
+            //WeatherService weatherService = new WeatherService(ipService.IpModel.city);
+            //return View(weatherService.GetWeatherModel());
+
+            NewsService newsService = new NewsService(ipService.IpModel.country_code);
+            return View(newsService.GetNewsModel());
         }
 
 
