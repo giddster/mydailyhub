@@ -8,6 +8,11 @@ namespace MyDailyHub.Models
     public class NewsModel
     {
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+
+        public string status { get; set; }
+        public int totalResults { get; set; }
+        public List<Article> articles { get; set; }
+        
         public class Source
         {
             public string id { get; set; }
@@ -25,14 +30,6 @@ namespace MyDailyHub.Models
             public DateTime publishedAt { get; set; }
             public string content { get; set; }
         }
-
-        public class Root
-        {
-            public string status { get; set; }
-            public int totalResults { get; set; }
-            public List<Article> articles { get; set; }
-        }
-
 
     }
 }
