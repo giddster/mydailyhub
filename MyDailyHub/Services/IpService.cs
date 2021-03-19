@@ -29,6 +29,7 @@ namespace MyDailyHub.Services
         {
             Request = request;
             ip_String = GetIpAddress();
+            GetIpModel();
         }
 
         /// <summary>
@@ -54,7 +55,7 @@ namespace MyDailyHub.Services
         /// <summary>
         /// calls ipstack API to get location info on user's IP address
         /// </summary>
-        public IpModel GetIpModel()
+        public void GetIpModel()
         {
             var apiKey = "5e40b6754ec2df29eb892f39aa57a1ec";
 
@@ -65,7 +66,6 @@ namespace MyDailyHub.Services
                 IpModel = JsonConvert.DeserializeObject<IpModel>(jsonString);
             }
             
-            return IpModel;
         }
               
         

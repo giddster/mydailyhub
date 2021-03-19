@@ -12,8 +12,6 @@ namespace MyDailyHub.Services
     public class QuotesService
     {
         public List<QuoteModel> QuotesList { get; set; }
-        public string JsonQuotesString { get; set; }
-
 
         /// <summary>
         /// Calls quotes API and deserializes to List of QuoteModel

@@ -1,8 +1,9 @@
-﻿@model NewsModel
+﻿@model MyDailyHub.Models.ViewModels.Home.IndexViewModel
 
 @{
     ViewData["Title"] = "Home Page";
 }
+
 
 <div class="text-center">
     <h1 class="display-4"> MyDailyHub @DateTime.Now.ToString("d") </h1>
@@ -12,7 +13,7 @@
 
     @if (Model != null)
     {
-        @*<p> "@Model.Text" - <i> @Model.Author </i> </p>*@
+        <p> "@Model.QuoteModel.Text" - <i> @Model.QuoteModel.Author </i> </p>
     }
     else
     {
@@ -21,10 +22,26 @@
 
 </div>
 
-<div> WEATHER AREA </div>
+<div>
+    WEATHER CAN SUCK MY BALLS AND GUSTAF HAS A TINY PEEPEE
+    @(Math.Round((Model.WeatherModel.main.temp - 273.15), 2))
+
+</div>
 <br />
 
-<div> NEWS AREA </div>
+<div>
+    NEWS AREA
+    Breaking news: Andy has major Peepee and so does Miki
+    <ol>
+        @for (int i = 0; i < Model.NewsModel.articles.Count; i++)
+            {
+                <li>@Model.NewsModel.articles[i].title</li>
+            }
+
+    </ol>
+
+
+</div>
 <br />
 
 

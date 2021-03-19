@@ -1,6 +1,7 @@
 ﻿All:
-	- Make common model for all models displayed on index.cshtml
+	- Create ViewModel
 	- Clean up Home Controller
+	- Extensions for stuff like converting to Celsius from Kelvin
 
 Ip-address: 
 	- API key: 5e40b6754ec2df29eb892f39aa57a1ec

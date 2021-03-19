@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MyDailyHub.Models;
+using MyDailyHub.Models.ViewModels.Home;
 using MyDailyHub.Services;
 using System;
 using System.Collections.Generic;
@@ -22,17 +23,18 @@ namespace MyDailyHub.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            //QuotesService quotes = new QuotesService();
-            //return View(quotes.GetRandomQuoteModel());
-
+            
             IpService ipService = new IpService(Request);
-            ipService.GetIpModel();
 
-            //WeatherService weatherService = new WeatherService(ipService.IpModel.city);
-            //return View(weatherService.GetWeatherModel());
+            QuotesService quotesService = new QuotesService();
+
+            WeatherService weatherService = new WeatherService(ipService.IpModel.city);
 
             NewsService newsService = new NewsService(ipService.IpModel.country_code);
-            return View(newsService.GetNewsModel());
+
+            IndexViewModel indexViewModel = new IndexViewModel(quotesService.GetRandomQuoteModel(), weatherService.GetWeatherModel(), newsService.GetNewsModel());
+            return View(indexViewModel);
+            
         }
 
 
