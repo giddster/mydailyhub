@@ -23,7 +23,6 @@ namespace MyDailyHub.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            
             IpService ipService = new IpService(Request);
 
             QuotesService quotesService = new QuotesService();
@@ -34,7 +33,6 @@ namespace MyDailyHub.Controllers
 
             IndexViewModel indexViewModel = new IndexViewModel(quotesService.GetRandomQuoteModel(), weatherService.GetWeatherModel(), newsService.GetNewsModel());
             return View(indexViewModel);
-            
         }
 
 

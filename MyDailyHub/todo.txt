@@ -2,6 +2,7 @@
 	- Create ViewModel
 	- Clean up Home Controller
 	- Extensions for stuff like converting to Celsius from Kelvin
+	- Clean up Index.cshtml
 
 Ip-address: 
 	- API key: 5e40b6754ec2df29eb892f39aa57a1ec
