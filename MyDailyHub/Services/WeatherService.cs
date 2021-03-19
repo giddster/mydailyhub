@@ -11,13 +11,21 @@ namespace MyDailyHub.Services
     public class WeatherService
     {
         public WeatherModel WeatherModel { get; set; }
-        public IpModel IpModel { get; set; }
         public string City { get; set; }
+        
+        /// <summary>
+        /// Sets the City property so that WeatherModel can be created
+        /// </summary>
+        /// <param name="city"></param>
         public WeatherService(string city)
         {
             City = city;
         }
 
+        /// <summary>
+        /// Calls the OpenWeather API and returns a WeatherModel
+        /// </summary>
+        /// <returns>WeatherModel based on IP</returns>
         public WeatherModel GetWeatherModel()
         {
             
