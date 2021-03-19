@@ -1,4 +1,4 @@
-﻿@model QuoteModel
+﻿@model WeatherModel
 
 @{
     ViewData["Title"] = "Home Page";
@@ -12,7 +12,7 @@
 
     @if (Model != null)
     {
-        <p> "@Model.Text" - <i> @Model.Author </i> </p>
+        @*<p> "@Model.Text" - <i> @Model.Author </i> </p>*@
     }
     else
     {

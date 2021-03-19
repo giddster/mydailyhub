@@ -24,9 +24,12 @@ namespace MyDailyHub.Controllers
         {
             //QuotesService quotes = new QuotesService();
             //return View(quotes.GetRandomQuoteModel());
-                        
+
             IpService ipService = new IpService(Request);
-            return View(ipService.GetIpModel());
+            ipService.GetIpModel();
+
+            WeatherService weatherService = new WeatherService(ipService.IpModel.city);
+            return View(weatherService.GetWeatherModel());
         }
 
 

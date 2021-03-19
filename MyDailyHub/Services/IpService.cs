@@ -17,6 +17,7 @@ namespace MyDailyHub.Services
     /// </summary>
     public class IpService
     {
+        public IpModel IpModel { get; set; }
         public HttpRequest Request { get; }
         public string ip_String { get; set; }
 
@@ -37,7 +38,6 @@ namespace MyDailyHub.Services
 
         public string GetIpAddress()
         {
-            IpService ipService = null;
             var remoteIp = Request.HttpContext.Connection.RemoteIpAddress.ToString();
 
             if (remoteIp != "127.0.0.1")
@@ -57,17 +57,16 @@ namespace MyDailyHub.Services
         /// </summary>
         public IpModel GetIpModel()
         {
-            IpModel ipInfo = new IpModel();
             var apiKey = "5e40b6754ec2df29eb892f39aa57a1ec";
 
             using (WebClient wc = new WebClient())
             {
                 string jsonString = wc.DownloadString(new Uri($"http://api.ipstack.com/{ip_String}?access_key={apiKey}")); 
 
-                ipInfo = JsonConvert.DeserializeObject<IpModel>(jsonString);
+                IpModel = JsonConvert.DeserializeObject<IpModel>(jsonString);
             }
             
-            return ipInfo;
+            return IpModel;
         }
               
         
