@@ -36,3 +36,5 @@ Design:
 	- Divide elements nicely on page
 	- good color scheme
 	- favicon
+	- fix carousel (partly working but need better understanding of how to iterate
+	over each slide)
